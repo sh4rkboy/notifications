@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notifapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!-- Start of first page -->
+
+
+<div data-role="page" id="MainPage" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+    <div data-role="header">
+        <h1>Notifapp</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+
+    </div><!-- /header -->
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+        <h1>Welcome to notifapp</h1>
+        <p>Go to the left menu</p>
+        <div data-demo-html="#panel-responsive-page1"></div><!--/demo-html -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="../" data-rel="back" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Back</a>
+    </div><!-- /content -->
+    <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+        <ul data-role="listview" id="myList">
+            <li><a href="#panel-responsive-page2" id="as1_btn">List of notifications</a></li>
+            <li><a href="#panel-responsive-page2" id="gotoPage3Butt">Add notification</a></li>
+            <li><a href="#panel-responsive-page2">Delete all notifications</a></li>
+            <li><a href="#panel-responsive-page2">Schedule notifications</a></li>
+
+        </ul>
+
+        </div>
+    </div>
+
+<!-- Start of second page LIST OF NOTIFICATIONS -->
+
+
+<div data-role="page" id="As1">
+    <div data-role="header">
+        <h1>List of notifications</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <p>Text</p>
+        <p><a href="#MainPage">Inicio</a></p>
+    </div><!-- /content -->
+
+    <div data-role="main" class="ui-content">
+    <ul data-role="listview" id="ListHandler">
+
+    </ul>
+
+    <div data-role="panel" id="datepicker" data-display="overlay">
+        <ul data-role="listview" data-inset="true">
+            <li>New Recordatory</li>
+            <li>
+                <label>Title:</label>
+                <input type="text" name="Task_title" id="Task_title" value="" maxlength="30" required></li>
+            <li><a id="PickDate" ><i class="fa fa-calendar" aria-hidden="true"></i> Date <span id="DatePrint"></span></a></li>
+            <li><a id="PickTime" ><i class="fa fa-clock-o" aria-hidden="true"></i> Time <span id="TimePrint"></span></a></li>
+            <li><a id="ListButton"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Save</a></li>
+        </ul>
+    </div>
+</div>
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#datepicker" data-role="none" data-rel="popup"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New</a></li>
+            <li><a id="deleteAllDb" data-role="none" data-rel="popup"><i class="fa fa-times" aria-hidden="true"></i> Delete all DB</a></li>
+        </ul>
+    </div>
+</div>
+
+    <div data-role="footer">
+        <h4></h4>
+    </div><!-- /footer -->
+</div>
+
+
+
+
+<!-- Start of third page ADD NOTIFICATION -->
+<div data-role="page" id="page3">
+    <div data-role="header">
+        <h1>Add notification</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <p>Text</p>
+        <p><a href="#page1">Inicio</a></p>
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4></h4> <!-- text of footer -->
+    </div><!-- /footer -->
+</div>
+
+
+</body>
+</html>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/moment.js"></script>
